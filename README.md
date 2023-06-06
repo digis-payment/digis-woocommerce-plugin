@@ -1,5 +1,7 @@
 # Digis WooCommerce Payment Gateway
 
+[![PHP Linting](https://github.com/digis-payment/digis-woocommerce-plugin/actions/workflows/lint.yml/badge.svg)](https://github.com/digis-payment/digis-woocommerce-plugin/actions/workflows/lint.yml)
+
 ## Description
 Digis is a WooCommerce plugin that enables online merchants to accept both crypto and SEPA payments, enhancing global transaction efficiency.
 
