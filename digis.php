@@ -5,7 +5,7 @@ require_once __DIR__ . '/digis-service.php';
 Plugin Name: Digis for WooCommerce
 Plugin URI: https://digis.io
 Description: Digis payment gateway: accept crypto and SEPA payments 
-Version: 1.1
+Version: 1.2
 Author: Digis Sarl
 Author URI: https://digis.io
 */
@@ -20,10 +20,6 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
 }
 
 add_action('plugins_loaded', 'my_custom_gateway_init', 11);
-
-
-
-
 
 function my_custom_gateway_init()
 {
@@ -98,20 +94,16 @@ function my_custom_gateway_init()
               'amount' => $order->get_total(),
               'address' => 'some-address',
               'network' => CryptoNetwork::ETH,
-              'currency' => CryptoCurrency::USDT, // this is needed but irrelevant from a business perspecgive
+              'currency' => CryptoCurrency::USDT, // this is needed but irrelevant from a business perspective
               'fiatCurrency' => FiatCurrency::EUR
               ];
 
 
             $result = createTransaction($params, $apiKey);
 
-           
-
-
             // Implement the logic to create a transaction on your external website
             // and obtain a URL to redirect the user to complete the payment
             $redirect_url = $result['url'];
-            //$redirect_url = 'https://your-external-website.com/payment-page'; // Replace with the actual URL
 
             // Mark the order as pending
             $order->update_status('pending', __('Awaiting payment from My Custom Gateway', 'my-custom-gateway'));
@@ -141,20 +133,12 @@ function my_custom_gateway_init()
                 $order_id = isset($_GET['order']) ? $_GET['order'] : null;
                 $order_key = isset($_GET['key']) ? $_GET['key'] : null;
 
-                error_log('check');
-                error_log($order_id);
-                error_log($order_key);
-
                 // Verify the order ID and order key
                 $order = wc_get_order($order_id);
-
-               
-               // error_log($order->get_order_key());
 
                if ($order && $order->get_order_key() === $order_key) {       
                     // Update the order status based on the payment result
                     $order->update_status('completed', __('Payment received via My Custom Gateway', 'my-custom-gateway'));
-            
                 }
             }
         }
