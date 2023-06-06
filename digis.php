@@ -5,7 +5,7 @@ require_once __DIR__ . '/digis-service.php';
 Plugin Name: Digis for WooCommerce
 Plugin URI: https://digis.io
 Description: Digis payment gateway: accept crypto and SEPA payments 
-Version: 1.3
+Version: 1.1
 Author: Digis Sarl
 Author URI: https://digis.io
 */
@@ -56,7 +56,7 @@ function my_custom_gateway_init()
                 'enabled' => array(
                     'title' => __('Enable/Disable', 'my-custom-gateway'),
                     'type' => 'checkbox',
-                    'label' => __('Enable My Custom Gateway', 'my-custom-gateway'),
+                    'label' => __('Enable the Digis Payment Gateway', 'my-custom-gateway'),
                     'default' => 'yes',
                 ),
                 'title' => array(
