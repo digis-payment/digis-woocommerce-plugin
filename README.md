@@ -9,6 +9,11 @@ Digis is a WooCommerce plugin that enables online merchants to accept both crypt
 3. Upload the downloaded zip file and click "Install Now".
 4. After the plugin is installed, click "Activate".
 
+### Videos
+
+* [Installing the plugin](https://vimeo.com/833567330/43c61341e8)
+* [Setup the plugin](https://vimeo.com/833568545/07e2a29f1b)
+
 ## Usage
 Once activated, go to WooCommerce -> Settings -> Payments. You will see Digis in the available payment methods. Enable it and enter the required configuration.
 
