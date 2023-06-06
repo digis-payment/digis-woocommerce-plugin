@@ -27,4 +27,4 @@ For support, feature requests, and bug reporting, please visit our [issues page]
 Details about the changes in each version can be found in our [release notes](/releases).
 
 ## License
-This project is licensed under the [GPLv3 License](LICENSE.md).
+This project is licensed under the [GPLv3 License](LICENSE).
