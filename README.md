@@ -21,10 +21,10 @@ Once activated, go to WooCommerce -> Settings -> Payments. You will see Digis in
 Detailed configuration instructions and usage guides can be found in our **documentation** (WIP).
 
 ## Support
-For support, feature requests, and bug reporting, please visit our [issues page](/issues).
+For support, feature requests, and bug reporting, please visit our [issues page](https://github.com/digis-payment/digis-woocommerce-plugin/issues).
 
 ## Changelog
-Details about the changes in each version can be found in our [release notes](/releases).
+Details about the changes in each version can be found in our [release notes](https://github.com/digis-payment/digis-woocommerce-plugin/releases).
 
 ## License
 This project is licensed under the [GPLv3 License](LICENSE).
